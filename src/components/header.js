@@ -41,6 +41,10 @@ let HeaderTitle = styled.h1`
 let HeaderCopy = styled.p`
   font-family: ${props => props.theme.serif};
   width: 50%;
+
+  @media screen and (max-width: 768px){
+    width: 100%;
+  }
 `
 
 let Nav = styled.nav`
