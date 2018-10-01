@@ -4,6 +4,9 @@ import styled from 'styled-components'
 let WaveSVG = styled.svg`
   width: 100%;
   height: 172px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 `
 
 class Wave extends Component {
