@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
+import Toggle from 'react-toggle'
 
 let HeaderWrapper = styled.header`
   background: ${props => props.theme.purple};
@@ -56,14 +57,16 @@ let Nav = styled.nav`
   grid-area: nav;
 `
 
-
-
 class header extends Component {
 
   constructor(props) {
     super(props)
 
     this.Greeter = this.Greeter.bind(this)
+
+  this.state = {
+    toggle: false
+  }
   }
 
   Greeter() {
