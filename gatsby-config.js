@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: `Ste O'Neill | Full Stack Web Developer`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -16,6 +16,16 @@ module.exports = {
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `monsteratt\:100, 200, 300, 400, 600, 700`,
+          `playfair display\:300,400,400i,700`, // you can also specify font weights and styles
+        ],
+      },
+    },
+    'gatsby-plugin-styled-components',
     'gatsby-plugin-offline',
   ],
 }
