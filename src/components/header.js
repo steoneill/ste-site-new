@@ -1,33 +1,27 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React, { Component } from 'react';
+import styled from 'styled-components'
 
-const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </div>
-)
+let HeaderWrapper = styled.header`
+  background: ${props => props.theme.purple};
+  height: 85vh;
+`
 
-export default Header
+let HeaderInner = styled.div`
+  max-width: ${props => props.theme.maxWidth};
+  margin: 0 auto;
+  color: white;
+`
+
+class header extends Component {
+  render() {
+    return (
+      <HeaderWrapper>
+        <HeaderInner>
+          <h1>test</h1>
+        </HeaderInner>
+      </HeaderWrapper>
+    );
+  }
+}
+
+export default header;
