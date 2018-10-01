@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import Toggle from 'react-toggle'
+import Wave from './Wave'
 
 let HeaderWrapper = styled.header`
   background: ${props => props.theme.purple};
@@ -13,7 +14,9 @@ let HeaderInner = styled.div`
   display: grid;
   grid-template-areas:
   "nav nav"
-  "content image";
+  "content image"
+  "wave wave";
+  position: relative;
 `
 
 
@@ -100,6 +103,7 @@ class header extends Component {
             </HeaderCopy>
           </HeaderContent>
         </HeaderInner>
+        <Wave />
       </HeaderWrapper>
     );
   }
