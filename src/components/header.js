@@ -24,6 +24,10 @@ let HeaderContent = styled.div`
   flex-direction: column;
   justify-content: center;
   grid-area: content;
+
+  @media screen and (max-width: 768px){
+    padding: 15px;
+  }
 `
 
 let HeaderGreeting = styled.h3`
