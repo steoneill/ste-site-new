@@ -9,10 +9,10 @@ let HeaderWrapper = styled.header`
 let HeaderInner = styled.div`
   max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  align-content: center;
+  display: grid;
+  grid-template-areas:
+  "nav nav"
+  "content image";
 `
 
 
@@ -23,6 +23,7 @@ let HeaderContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  grid-area: content;
 `
 
 let HeaderGreeting = styled.h3`
@@ -41,6 +42,12 @@ let HeaderCopy = styled.p`
   font-family: ${props => props.theme.serif};
   width: 50%;
 `
+
+let Nav = styled.nav`
+  height: 200px;
+  grid-area: nav;
+`
+
 
 
 class header extends Component {
@@ -70,6 +77,7 @@ class header extends Component {
       <HeaderWrapper>
         <HeaderInner>
           <HeaderContent>
+            <Nav />
             <HeaderGreeting>
               {this.Greeter()}
             </HeaderGreeting>
