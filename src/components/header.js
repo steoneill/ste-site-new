@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import styled from 'styled-components'
 import Toggle from 'react-toggle'
 import Wave from './Wave'
@@ -13,12 +13,12 @@ let HeaderInner = styled.div`
   margin: 0 auto;
   display: grid;
   grid-template-areas:
-  "nav nav"
-  "content image"
-  "wave wave";
+    'nav nav'
+    'content image'
+    'wave wave';
   position: relative;
+  margin-bottom: 200px;
 `
-
 
 let HeaderContent = styled.div`
   color: white;
@@ -29,7 +29,7 @@ let HeaderContent = styled.div`
   justify-content: center;
   grid-area: content;
 
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     padding: 15px;
   }
 `
@@ -37,7 +37,7 @@ let HeaderContent = styled.div`
 let HeaderGreeting = styled.h3`
   font-size: 20px;
   margin-bottom: 0;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
   font-weight: 400;
 `
 
@@ -50,7 +50,7 @@ let HeaderCopy = styled.p`
   font-family: ${props => props.theme.serif};
   width: 50%;
 
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     width: 100%;
   }
 `
@@ -60,30 +60,34 @@ let Nav = styled.nav`
   grid-area: nav;
 `
 
-class header extends Component {
+let WaveBottom = styled(Wave)`
+  position: absolute;
+  bottom: 0;
+`
 
+class header extends Component {
   constructor(props) {
     super(props)
 
     this.Greeter = this.Greeter.bind(this)
 
-  this.state = {
-    toggle: false
-  }
+    this.state = {
+      toggle: false,
+    }
   }
 
   Greeter() {
-    var today = new Date();
-    var hourNow = today.getHours();
+    var today = new Date()
+    var hourNow = today.getHours()
 
     if (hourNow > 18) {
-      return 'Good evening!';
+      return 'Good evening!'
     } else if (hourNow > 12) {
-      return 'Good afternoon!';
+      return 'Good afternoon!'
     } else if (hourNow > 0) {
-      return 'Good morning!';
+      return 'Good morning!'
     } else {
-      return 'Welcome!';
+      return 'Welcome!'
     }
   }
   render() {
@@ -92,21 +96,19 @@ class header extends Component {
         <HeaderInner>
           <HeaderContent>
             <Nav />
-            <HeaderGreeting>
-              {this.Greeter()}
-            </HeaderGreeting>
-            <HeaderTitle>
-              My name's Ste.
-            </HeaderTitle>
+            <HeaderGreeting>{this.Greeter()}</HeaderGreeting>
+            <HeaderTitle>My name's Ste.</HeaderTitle>
             <HeaderCopy>
-              I’m a full stack web developer based in Leeds, England. I like to make bold, beautiful websites that don’t take themselves too seriously.
+              I’m a full stack web developer based in Leeds, England. I like to
+              make bold, beautiful websites that don’t take themselves too
+              seriously.
             </HeaderCopy>
           </HeaderContent>
         </HeaderInner>
-        <Wave />
+        <WaveBottom />
       </HeaderWrapper>
-    );
+    )
   }
 }
 
-export default header;
+export default header
