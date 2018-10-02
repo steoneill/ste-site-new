@@ -7,6 +7,7 @@ import { ThemeProvider } from 'styled-components'
 
 import Header from './header'
 import Footer from './footer'
+import ContentWrapper from './content'
 import './layout.css'
 
 let theme = {
@@ -44,6 +45,21 @@ const Layout = ({ children }) => (
             <html lang="en" />
           </Helmet>
           <Header siteTitle={data.site.siteMetadata.title} />
+          <ContentWrapper>
+            <h1>About</h1>
+          </ContentWrapper>
+
+          <ContentWrapper>
+            <h1>Skills</h1>
+          </ContentWrapper>
+
+          <ContentWrapper>
+            <h1>Work</h1>
+          </ContentWrapper>
+
+          <ContentWrapper>
+            <h1>Contact</h1>
+          </ContentWrapper>
 
           <Footer />
         </div>
