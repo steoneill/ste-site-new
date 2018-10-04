@@ -3,11 +3,14 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-import { ThemeProvider } from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
 
 import Header from './header'
+import FooterAnim from './FooterAnim'
 import Footer from './footer'
+import Skills from './skills'
 import ContentWrapper from './content'
+import Contact from './Contact'
 import './layout.css'
 
 let theme = {
@@ -50,7 +53,7 @@ const Layout = ({ children }) => (
           </ContentWrapper>
 
           <ContentWrapper>
-            <h1>Skills</h1>
+            <Skills />
           </ContentWrapper>
 
           <ContentWrapper>
@@ -58,10 +61,11 @@ const Layout = ({ children }) => (
           </ContentWrapper>
 
           <ContentWrapper>
-            <h1>Contact</h1>
+            <Contact />
           </ContentWrapper>
+          <FooterAnim />
 
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </ThemeProvider>
     )}
