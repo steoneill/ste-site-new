@@ -3,8 +3,14 @@ import * as React from 'react'
 export default class FooterWaves extends React.Component {
   render() {
     return (
-      <svg width="100%" height="419" viewBox="0 0 1920 419" version="1.1">
-        <path fill="#8FFAE3">
+      <svg
+        width="100%"
+        height="419"
+        viewBox="0 0 100% 419"
+        version="1.1"
+        preserveAspectRatio="none"
+      >
+        <path fill="#8FFAE3" style={{ width: '1920px' }}>
           <animate
             repeatCount="indefinite"
             attributeName="d"
