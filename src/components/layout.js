@@ -48,7 +48,7 @@ const Layout = ({ children }) => (
             <html lang="en" />
           </Helmet>
           <Header siteTitle={data.site.siteMetadata.title} />
-          <ContentWrapper>
+          {/* <ContentWrapper>
             <h1>About</h1>
           </ContentWrapper>
 
@@ -63,7 +63,7 @@ const Layout = ({ children }) => (
           <ContentWrapper>
             <Contact />
           </ContentWrapper>
-          <FooterAnim />
+          <FooterAnim /> */}
 
           {/* <Footer /> */}
         </div>

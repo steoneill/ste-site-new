@@ -4,7 +4,7 @@ import Wave from './Wave'
 
 let HeaderWrapper = styled.header`
   background: ${props => props.theme.purple};
-  height: 85vh;
+  height: 100vh;
   position: relative;
 `
 
@@ -14,7 +14,7 @@ let HeaderInner = styled.div`
   display: grid;
   grid-template-areas:
     'nav nav'
-    'content image'
+    'content content'
     'wave wave';
 `
 
@@ -44,6 +44,11 @@ let HeaderTitle = styled.h1`
   margin-top: 0;
 `
 
+let socialLink = styled.a`
+  color: white;
+  text-decoration: none;
+`
+
 let HeaderCopy = styled.p`
   font-family: ${props => props.theme.serif};
   width: 50%;
@@ -56,6 +61,11 @@ let HeaderCopy = styled.p`
 let Nav = styled.nav`
   height: 200px;
   grid-area: nav;
+`
+
+let Links = styled.div`
+  display: flex;
+  justify-content: space-around;
 `
 
 class header extends Component {
@@ -95,6 +105,26 @@ class header extends Component {
               I’m a full stack web developer based in Leeds, England. I like to
               make bold, beautiful websites that don’t take themselves too
               seriously.
+              <br />
+              <br />
+              I'm currently rebuilding my site, but if you'd like to get in
+              touch get in touch on my social media below!
+              <br />
+              <br />
+              <Links>
+                <socialLink href="https://www.twitter.com/stecodes">
+                  Twitter
+                </socialLink>
+                <socialLink href="https://www.dribbble.com/stecodes">
+                  Dribbble
+                </socialLink>
+                <socialLink href="https://www.codepen.com/stecodes">
+                  Codepen
+                </socialLink>
+                <socialLink href="https://www.gihub.com/steoneill">
+                  Github
+                </socialLink>
+              </Links>
             </HeaderCopy>
           </HeaderContent>
         </HeaderInner>
