@@ -63,7 +63,7 @@ const Layout = ({ children }) => (
           <ContentWrapper>
             <Contact />
           </ContentWrapper>
-          <FooterAnim />
+          {/* <FooterAnim /> */}
 
           {/* <Footer /> */}
         </div>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import Wave from './Wave'
+import HeaderBackground from '../images/Header_Background.png'
 
 let HeaderWrapper = styled.header`
   background: ${props => props.theme.purple};
@@ -35,7 +36,6 @@ let HeaderContent = styled.div`
 let HeaderGreeting = styled.h3`
   font-size: 20px;
   margin-bottom: 0;
-  color: rgba(255, 255, 255, 0.85);
   font-weight: 400;
 `
 
